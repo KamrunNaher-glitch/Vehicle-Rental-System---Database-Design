@@ -30,3 +30,4 @@ FROM vehicles v
 JOIN bookings b ON v.vehicle_id = b.vehicle_id
 GROUP BY v.vehicle_name
 HAVING COUNT(b.booking_id) > 2;
+
