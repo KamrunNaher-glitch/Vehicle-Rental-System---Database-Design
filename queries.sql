@@ -1,11 +1,15 @@
 --query1
-SELECT
-  b.booking_id,
+SELECT 
   u.name AS customer_name,
-  v.vehicle_name
+  v.vehicle_name,
+  b.start_date,
+  b.end_date,
+  b.booking_status,
+  b.total_cost
 FROM bookings b
-inner join users u ON b.user_id = u.user_id
-inner join vehicles v ON b.vehicle_id = v.vehicle_id;
+INNER JOIN users u ON b.user_id = u.user_id
+INNER JOIN vehicles v ON b.vehicle_id = v.vehicle_id;
+
 
 --query2
 SELECT *
